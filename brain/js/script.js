@@ -23,7 +23,7 @@ function chkUser() { // checking from localstorage if user provided name before.
         if((tempPer == null || tempPer == '' || tempPer == 'undefined') 
         && (tempCa == null || tempCa == '' || tempCa == 'undefined')) {
             theForm.style.display = 'block'; // show the form for password
-            errH.innerHTML = tempName + ', Hãy thử lại lần nữa.';  // display this text
+            errH.innerHTML = tempName + ', hãy thử lại lần nữa.';  // display this text
             document.getElementById('logoutBtn').style.display = 'block'; // show logout button            
         } else { // if percentage and correct answers found
             document.getElementById('theResult').style.display = 'block';
@@ -99,14 +99,14 @@ function chkPass(btn) { // checking password
         document.getElementsByClassName('warning')[0].style.display = 'block';
         document.getElementsByClassName('warning')[0].style.opacity = '1';
 
-        errH.innerHTML = 'Errrr!';
+        errH.innerHTML = 'Lỗi!';
 
         document.getElementsByClassName('passBox')[0].style.display = 'none';
 
         err.style.color = '#dc3545';
         err.innerHTML = 'Bạn không thể bỏ mục này!';
 
-        btn.innerHTML = 'Reload';
+        btn.innerHTML = 'Đang tải';
         btn.removeAttribute('disabled');
 
         btn.classList.add('btn-danger');
@@ -131,7 +131,7 @@ function chkPass(btn) { // checking password
             err.style.color = '#dc3545';
             err.innerHTML = 'Sai mật mã.';
             
-            btn.innerHTML = 'Dismiss';
+            btn.innerHTML = 'Bỏ qua';
             btn.removeAttribute('disabled');
 
             btn.classList.add('btn-danger');
@@ -246,7 +246,7 @@ function validateForm() {
         }
     }
     if(!valid)   { // if no option selected
-        alert("Please Select Any Option...");
+        alert("Hãy chọn một đáp án");
         nextBtn.setAttribute('disabled', 'disabled');
     }
     if (valid) // if the valid status is true, mark the step as finished
@@ -263,13 +263,13 @@ function enableBtn(i) {
 
 function topping(n) { // dynamic next button's text
     if (n == totQ.length-1)
-    document.getElementById('next-button').innerHTML = 'Submit';
+    document.getElementById('next-button').innerHTML = 'Đồng ý';
     else if (n == totQ.length) {
         document.getElementById('next-button').innerHTML = 'No Questions';
         nextBtn.setAttribute('disabled', 'disabled');
     }
     else
-    document.getElementById('next-button').innerHTML = 'Next';
+    document.getElementById('next-button').innerHTML = 'Tiếp tục';
     fixStepIndicator(n) // it will display the correct step indicator
 }
 
