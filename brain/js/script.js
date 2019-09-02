@@ -23,7 +23,7 @@ function chkUser() { // checking from localstorage if user provided name before.
         if((tempPer == null || tempPer == '' || tempPer == 'undefined') 
         && (tempCa == null || tempCa == '' || tempCa == 'undefined')) {
             theForm.style.display = 'block'; // show the form for password
-            errH.innerHTML = tempName + ', Input Your Key Again.';  // display this text
+            errH.innerHTML = tempName + ', Hãy thử lại lần nữa.';  // display this text
             document.getElementById('logoutBtn').style.display = 'block'; // show logout button            
         } else { // if percentage and correct answers found
             document.getElementById('theResult').style.display = 'block';
@@ -47,7 +47,7 @@ function askPass() { // when user puts name and press enter
     }
     usernameForm.style.display = 'none'; // hide the current form or username
     theForm.style.display = 'block'; // show the form of password
-    errH.innerHTML = tempName + ', Please Provide Your Key'; // display this line with user's name
+    errH.innerHTML = tempName + ', Nhập mã 192837465 để xác nhận.'; // display this line with user's name
 }
 
 /*-----------------------------------*\
@@ -80,12 +80,12 @@ function chkPass(btn) { // checking password
             
             document.getElementsByClassName('passBox')[0].style.display = 'none'; // hide input box
 
-            errH.innerHTML = 'Bingo!';  // in first line
+            errH.innerHTML = 'Xin chào!';  // in first line
 
-            err.innerHTML = 'The password was <br> Correct!'; // in 2nd line
+            err.innerHTML = 'Chào mừng bạn đến với bộ câu hỏi về phân loại rác và bảo vệ môi trường.'; // in 2nd line
             err.style.color = '#28a745';
             
-            btn.innerHTML = 'Start Quiz &gt;'; // replace text of input box to this
+            btn.innerHTML = 'Bắt đầu &gt;'; // replace text of input box to this
             btn.removeAttribute('disabled'); // make it enable again
 
             btn.classList.add('btn-success'); // change color of btn
@@ -104,7 +104,7 @@ function chkPass(btn) { // checking password
         document.getElementsByClassName('passBox')[0].style.display = 'none';
 
         err.style.color = '#dc3545';
-        err.innerHTML = 'Password Can\'t Be Empty!';
+        err.innerHTML = 'Bạn không thể bỏ mục này!';
 
         btn.innerHTML = 'Reload';
         btn.removeAttribute('disabled');
@@ -126,10 +126,10 @@ function chkPass(btn) { // checking password
             
             document.getElementsByClassName('passBox')[0].style.display = 'none';
 
-            errH.innerHTML = 'Errrr!';
+            errH.innerHTML = 'Lỗi!';
 
             err.style.color = '#dc3545';
-            err.innerHTML = 'The password was <br> NOT Correct!';
+            err.innerHTML = 'Sai mật mã.';
             
             btn.innerHTML = 'Dismiss';
             btn.removeAttribute('disabled');
@@ -306,11 +306,11 @@ var RColor;
 function showResult(percentage, ca) {
     if(percentage == 100) {
         RColor = 'teal'
-        resultFb.innerHTML = 'Wohoo.. Great, You are pass!';
-        correctAns.innerHTML = 'Correct Answers: ' + ca;
+        resultFb.innerHTML = 'Chúc mừng bạn đã đạt được 100 điểm. Hãy tích cực bảo vệ môi trường nhé!';
+        correctAns.innerHTML = 'Câu trả lời đúng: ' + ca;
     } else if(percentage >= 80) {
         RColor = 'green'
-        resultFb.innerHTML = 'Congrats! You are pass.';
+        resultFb.innerHTML = 'Chúc mừng bạn đã đạt được trên 80 điểm. Hãy cố gắng thêm chút nữa nhé!';
         correctAns.innerHTML = 'Correct Answers: ' + ca;
     } else if(percentage >= 65) {
         RColor = 'blue'
