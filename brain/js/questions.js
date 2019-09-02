@@ -11,12 +11,12 @@ function CQuiz(que, o1, o2, o3, o4, ans, d)  {
 
 // Question 1
 var q1 = new CQuiz(
-    'Which function among the following lets to register a function to be invoked repeatedly after a certain time?',
-    'setTimeout()',
-    'setTotaltime()',
-    'setInterval()',
-    'none of the mentioned',
-    3,
+    'Đồ vật nào dưới đây có thể tái sử dụng?',
+    'Chai nhựa',
+    'Túi nilon',
+    'Vỏ bánh, kẹo',
+    'Không có đồ vật nào',
+    1,
     0
 );
 
