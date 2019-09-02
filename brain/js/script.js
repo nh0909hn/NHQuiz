@@ -159,7 +159,7 @@ function resetErr() { // reset all error to default (This is triggered when user
     document.getElementsByClassName('finger-print')[0].style.display = 'block';
     document.getElementsByClassName('finger-print')[0].style.opacity = '.6';
 
-    submitBtn.innerHTML = 'Confirm Identity';
+    submitBtn.innerHTML = 'Xác nhận';
     submitBtn.classList.remove("btn-danger");
     submitBtn.classList.add('btn-primary');
 }
